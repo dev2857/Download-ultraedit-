@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Edit Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        header {
+            padding-left: 50px;
+            display: flex;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .img1 {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .ul {
+            list-style: none;
+            display: flex;
+            padding-left: 172px;
+        }
+
+        .li {
+            font-size: 0.6em;
+            padding: 7px;
+            padding-top: 16px;
+            cursor: pointer;
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .img2 {
+            height: 22px;
+            padding-top: 13px;
+            cursor: pointer;
+        }
+
+        .container>p {
+            font-size: 1.8em;
+            margin-top: 61px;
+            margin-left: 147px;
+            cursor: text;
+            /* font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: normal; */
+            /* font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal; */
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .img3 {
+            margin-top: 70px;
+            height: 18px;
+            margin-left: 12px;
+            cursor: pointer;
+        }
+
+        .content {
+            font-size: 0.9em;
+            cursor: text;
+            /* font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal; */
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .before {
+            margin-left: 123px;
+            margin-top: 26px;
+        }
+
+        .after {
+            margin-left: 320px;
+        }
+
+        #but {
+            font-size: 0.46em;
+            margin-left: 320px;
+            padding: 6px;
+            margin-top: 15px;
+            cursor: pointer;
+            background-color: rgb(23 144 192);
+            border-style: none;
+            border-radius: 4px;
+            color: aliceblue;
+            
+        }
+
+        .img4 {
+            height: 41px;
+            margin-left: 103px;
+        }
+
+        .line {
+            margin-top: 36px;
+            display: flex;
+        }
+
+        #dev {
+            margin-top: 5px;
+            margin-left: 11px;
+            cursor: text;
+        }
+
+        #dev2 {
+            font-size: 0.486666em;
+            margin-top: 13px;
+            margin-left: 3px;
+            cursor: text;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 170px 170px 170px;
+            grid-template-rows: 170px 170px 170px 170px;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .button {
+            font-size: 0.41em;
+            background-color: #77e477;
+            border-style: none;
+            font-weight: bold;
+            padding: 6px;
+            border-radius: 4px;
+            color: white;
+            margin-top: 30px;
+            margin-left: 25px;
+        }
+
+        .mini {
+            font-size: 0.37em;
+            margin-left: 46px;
+            margin-top: 6px;
+        }
+
+        .mini2 {
+            font-size: 0.01em;
+            padding: 2px;
+        }
+
+        .box1 {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .boxes>p:first-child {
+            font-weight: bolder;
+            margin-left: 32px;
+            margin-top: 16px;
+        }
+
+        .box2 {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .nang {
+            font-size: xx-small;
+            margin-left: 42px;
+            margin-top: 12px;
+            font-size: 0.55em;
+        }
+
+        .button2 {
+            font-size: 0.41em;
+            background-color: #73e873;
+            border-style: none;
+            font-weight: bold;
+            padding: 6px;
+            border-radius: 4px;
+            color: white;
+            margin-top: 7.5px;
+            margin-left: 25px;
+            cursor: pointer;
+        }
+
+        .box3 {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .box4 {
+            grid-row: 2/3;
+            grid-column: 1/2;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .box5 {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .box6 {
+            grid-row: 2/3;
+            grid-column: 3/4;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .box7 {
+            grid-row: 3/4;
+            grid-column: 1/2;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .box8 {
+            grid-row: 3/4;
+            grid-column: 2/3;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .box9 {
+            grid-row: 3/4;
+            grid-column: 3/4;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .box10 {
+            grid-row: 4/5;
+            grid-column: 1/2;
+            height: 132px;
+            width: 120px;
+            background-color: rgb(255 255 255);
+        }
+
+        .item {
+            margin-left: 20px;
+        }
+
+        #small {
+            margin-top: -2px;
+        }
+
+        #but:hover {
+            background-color: rgb(19, 129, 172);
+            color: white;
+        }
+
+        .bold {
+            font-weight: bolder;
+            margin-left: 146px;
+            margin-top: 110px;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .first {
+            font-size: 0.56em;
+            margin-left: 147px;
+            margin-top: 7px;
+            color: white;
+
+        }
+
+        .second {
+            font-size: 0.56em;
+            margin-left: 170px;
+            color: white;
+        }
+
+        .main2 {
+            display: flex;
+        }
+
+        .sub {
+            font-size: 0.93em;
+            margin-top: 29px;
+            margin-left: 26px;
+            color: rgb(30, 159, 206)
+        }
+
+        .email {
+            font-size: 0.5em;
+            margin-left: 64px;
+            margin-top: 14px;
+        }
+
+        .sign {
+            margin-left: 17px;
+            font-size: 0.5em;
+            color: white;
+            font-weight: 800;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 64px;
+            padding-right: 64px;
+            margin-top: 6px;
+            border-style: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background-color: rgb(30, 159, 206)
+        }
+
+        .form {
+            background-color: white;
+            height: 134px;
+            width: 193px;
+            margin-top: 60px;
+            margin-left: 81px;
+            border-radius: 8px;
+        }
+
+        .main2 {
+            background-color: black;
+            height: 250px;
+        }
+
+        .text {
+            background-color: black;
+            height: 200px;
+        }
+
+        .Q1 {
+            color: white;
+            margin-left: 125px;
+            padding-top: 19px;
+            font-size: 0.97em;
+            font-family: sans-serif;
+        }
+
+        .Q1ans {
+            color: white;
+            font-size: 0.56em;
+            margin-left: 125px;
+            padding-top: 12px;
+        }
+
+        .Q2 {
+            color: white;
+            margin-left: 125px;
+            padding-top: 19px;
+            font-size: 0.97em;
+            font-family: sans-serif;
+        }
+
+        .Q2ans {
+            color: white;
+            font-size: 0.56em;
+            margin-left: 125px;
+            padding-top: 12px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(30, 159, 206)
+        }
+
+        .footer {
+            display: grid;
+            grid-template-rows: 217px;
+            grid-template-columns: 120px 120px 160px 120px 120px;
+            width: 745px;
+            align-items: flex-start;
+            align-content: center;
+            justify-content: center;
+            column-gap: 12px;
+            justify-items: center;
+            margin-top: 33px;
+        }
+
+        .abc {
+            list-style: none;
+            font-size: 0.6em;
+            font-weight: 100;
+            margin-top: 3px;
+        }
+
+        .bold2 {
+            font-weight: 1000;
+            font-size: 0.557em;
+            font-family: sans-serif;
+        }
+
+        .d {
+            padding: 1.7px;
+        }
+
+        .footq2 {
+            font-size: 0.6em;
+            font-weight: 100;
+            margin-top: 3px;
+            padding: 1.7px;
+        }
+
+        .p1 {
+            font-size: 0.6em;
+            font-weight: 100;
+            margin-top: 3px;
+            padding: 1.7px;
+        }
+
+        .p2 {
+            font-size: 0.6em;
+            font-weight: 100;
+            padding: 1.7px;
+        }
+
+        #space {
+            padding-left: 5px;
+            height: 15px;
+            width: 102px;
+            font-size: 0.4em;
+            margin-left: 2px;
+            border-radius: 5px;
+            border-style: solid;
+        }
+
+        .blue {
+            font-size: 0.5em;
+            font-weight: bolder;
+            margin-left: 1px;
+            padding: 5px 33px 5px 33px;
+            border-style: none;
+            color: white;
+            background-color: rgb(30, 159, 206);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .end {
+            display: flex;
+            margin-bottom: 31px;
+        }
+
+        .my {
+            height: 53px;
+            margin-left: 108px;
+            margin-top: 39px;
+            cursor: pointer;
+        }
+
+        .last {
+            font-size: 0.5em;
+            margin-left: 129px;
+            margin-top: -1px;
+        }
+
+        #apps {
+            height: 35px;
+            margin-top: 37px;
+            margin-left: 245px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="img1" src="logo.png" alt="logo">
+        <ul class="ul">
+            <li class="li">Products &vee;</li>
+            <li class="li">For buisness &vee; </li>
+            <li class="li">Resources &vee;</li>
+            <li class="li">Support &vee;</li>
+            <li class="li">Our company &vee;</li>
+        </ul>
+        <img class="img2" src="search.png" alt="searchbar">
+    </header>
+
+    <div class="container">
+        <p>Download <b>UltraEdit</b> for Windows</p>
+        <img class="img3" src="star.png" alt="star">
+    </div>
+
+    <div class="content">
+        <p class="before">Download and try UltraEdit before you buy it! This download includes the full Windows</p>
+        <p class="after">version of the text editor.</p>
+    </div>
+
+    <div>
+        <button id="but">DOWNLOAD MAC OR LINUX VERSION</button>
+    </div>
+
+    <div class="line">
+        <img class="img4" src="logo2.png" alt="logo">
+        <p id="dev">
+            Download UltraEdit
+        </p>
+        <p id="dev2">
+            v2024.1(released 2024-08-27) | Hotfix information (2024-08-18)
+        </p>
+    </div>
+
+    <div class="main">
+        <div class="boxes box1">
+            <p>
+                English
+            </p>
+            <button class="button">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                3C783C0872319DE70343C2C79D9E004FDA3
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;F1DB472B8F1119343D42190AAD8C
+            </p>
+        </div>
+        <div class="boxes box2">
+            <p>
+                Deutsch
+            </p>
+            <p class="nang">
+                German
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                242539AB16C49F4CB5139A832902F4F72D9FF433
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;132F18EA7FF8F0FDA0A42084
+            </p>
+        </div>
+        <div class="boxes box3">
+            <p>
+                Italiano
+            </p>
+            <p class="nang">
+                Italian
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                48CF9D2471CCDCDE5F202616861A6007B3D93CD5
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 4AD2E6B8740F535C5913FE19
+            </p>
+        </div>
+        <div class="boxes box4">
+            <p>
+                Español
+            </p>
+            <p class="nang">
+                Spanish
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                5D98FA1EABC4809A505F70E6EEBB24AAEFA7
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                41B0599CC529FED3E4F15CC0CB11
+            </p>
+        </div>
+        <div class="boxes box5">
+            <p>
+                français
+            </p>
+            <p class="nang">
+                French
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                70FB8129A6C61C14342400F0C82D2666B4AA6630
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; CDC9CD98FFE54331A13096DA
+            </p>
+        </div>
+        <div class="boxes big box6">
+            <p id="small">
+                Português brasileiro
+            </p>
+            <p class="nang item">
+                Brazilian Portuguese
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                D5DAB5F87CC37C947C428C176F620CB8ED4B182E
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; BDBBCD8C1926FF6008292C4A
+            </p>
+        </div>
+        <div class="boxes box7">
+            <p id="Japanese" style="margin-left: 42px;">
+                日本
+            </p>
+            <p class="nang">
+                Japanese
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                5956FE6AF0CBB6CB31C6D87CAC07978CD3561E
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                59C0D735E3F40BFE434E3E6
+            </p>
+        </div>
+        <div class="boxes box8">
+            <p>
+                한국어
+            </p>
+            <p class="nang">
+                Korean
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                A3112F17270C522F61A18176FF3E827DC2C
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;E7DF7B0423946981E91B471CCA080
+            </p>
+        </div>
+        <div class="boxes box9">
+            <p id="chaina" style="margin-left: 39px;">
+                中国
+            </p>
+            <p class="nang">
+                Chinese
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                FD84298EB022E843BE5585DCDCE2085C0B207
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 44B3330CAFF1C65845862A65630
+            </p>
+        </div>
+        <div class="boxes box10">
+            <p id="chinese" style="margin-left: 43px;">
+                中國
+            </p>
+            <p id="chinese2" class="nang" style="margin-left: 25px;">
+                Traditional Chinese
+            </p>
+            <button class="button2">
+                Download 64-bit
+            </button>
+            <p class="mini">
+                SHA256
+            </p>
+            <p class="mini2">
+                B63354A6C993C4FF4631F2EB7CC3B0363978B
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 6C6FCBFFEC3701608E705A3BF4A
+            </p>
+        </div>
+    </div>
+
+    <div class="main2">
+        <div>
+            <p class="bold">
+                Join the UltraEdit newsletter
+            </p>
+            <p class="first">
+                Sign up for our newsletter and receive emails for the latest
+            </p>
+            <p class="second">
+                news, blogs, and special deals on UltraEdit.
+            </p>
+        </div>
+        <div class="form">
+            <p class="sub">
+                Subscribe to our emails
+            </p>
+            <p class="email">
+                Enter email address
+            </p>
+            <input type="text"
+                style="margin-left: 17px; height: 17px; width: 164px;border-style: none;    background-color: #e6e4d9;"><br>
+            <button class="sign">SIGN UP</button>
+        </div>
+    </div>
+
+    <div class="text">
+        <p class="Q1">
+            EXE or MSI?
+        </p>
+        <p class="Q1ans">
+            The EXE builds of our products are the preferred download for most of our users, running Windows 8.1 and
+            later.
+        </p>
+        <p class="Q1ans">
+            We make MSI builds available for bulk or silent deployments (command line, GPO, SCCM, etc.).
+            <a href="https://www.ultraedit.com"> Get the UltraEdit MSI
+                installer.</a>
+        </p>
+        <p class="Q2">
+            Free trial period
+        </p>
+        <p class="Q2ans">
+            This application comes with a free, fully functional 30 day trial period. After the trial period expires,
+            you must <a href="https://www.ultraedit.com"> purchase a license</a> &nbsp;to
+        </p>
+        <p class="Q2ans">
+            continue using it.
+        </p>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="q1">
+                <p class="bold2">
+                    What’s your language?
+                </p>
+                <ul class="abc">
+                    <li class="d">Code editor (General)</li>
+                    <li class="d">Text editor</li>
+                    <li class="d">Hex/Binary</li>
+                    <li class="d">HTML</li>
+                    <li class="d">CSS</li>
+                    <li class="d">Unix shell scripts</li>
+                    <li class="d">PL/SQL</li>
+                    <li class="d">EDI</li>
+                    <li class="d">C++</li>
+                    <li class="d">PHP</li>
+                    <li class="d">XML</li>
+                    <li class="d">Markdown</li>
+                    <li class="d">SAS</li>
+                    <li class="d">Visual Basic (VB)</li>
+                </ul>
+            </div>
+            <div class="q2">
+                <p class="bold2">
+                    What do you need to do?
+                </p>
+                <p class="footq2">Edit large text files</p>
+                <p class="footq2">Use secure and compliant<br>software</p>
+                <p class="footq2">Work with unique languages<br>and formats</p>
+                <p class="footq2">Edit hex and binary files</p>
+                <p class="footq2">Reformat XML/JSON files</p>
+                <p class="footq2">Massive find and replace <br>operations</p>
+                <p class="footq2">Edit via columns/blocks</p>
+            </div>
+            <div class="q3">
+                <p class="bold2">
+                    What type of user are you?
+                </p>
+                <ul class="abc">
+                    <li class="d">Programmer / Developer</li>
+                    <li class="d">Web Developer</li>
+                    <li class="d">Database Manager</li>
+                    <li class="d">System Administrator</li>
+                    <li class="d">Technical Writer</li>
+                    <li class="d">Editor / Publisher</li>
+                    <li class="d">Medical / Pharmaceutical</li>
+                </ul>
+            </div>
+            <div class="q1">
+                <p class="bold2">
+                    General
+                </p>
+                <ul class="abc">
+                    <li class="d">Contact</li>
+                    <li class="d">License Agreement (EULA)</li>
+                    <li class="d">End of Life Policy</li>
+                    <li class="d">Libraries and Patents</li>
+                    <li class="d">Information Policy</li>
+                    <li class="d">Privacy Policy</li>
+                    <li class="d">Uninstall Instructions</li>
+                    <li class="d">Sitemap</li>
+                    <li class="d">Legal</li>
+                    <li class="d">Software Security</li>
+                </ul>
+            </div>
+            <div class="q1">
+                <p class="bold2">
+                    Subscribe to Newsletter
+                </p>
+                <p class="p1">
+                    Get the latest news on new releases, event, and
+                </p>
+                <p class="p2">
+                    developments.
+                </p>
+                <input id="space" type="text" placeholder="Enter email address...">
+                <button class="blue">SUBSCRIBE</button>
+            </div>
+        </div>
+    </footer>
+    <div class="end">
+        <div class="pic" id="pic">
+            <img class="my" src="footerlogo.png" alt="symbol">
+            <p class="last">©2024 UltraEdit. All rights reserved</p>
+        </div>
+        <div>
+            <img id="apps" src="apps.png" alt="apps">
+        </div>
+    </div>
+</body>
+
+</html>
