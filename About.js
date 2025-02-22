@@ -9,7 +9,7 @@ export default function About() {
 
     const toggle = () => {
         if (Mystyle.color === 'white') {
-            //  document.body.style.backgroundColor = 'white'
+            document.body.style.backgroundColor = 'white'
             Setstyle({
                 color: 'black',
                 backgroundColor: 'white'
@@ -17,11 +17,10 @@ export default function About() {
             setText('Dark mode')
         }
         else {
-            // document.body.style.backgroundColor = 'black'
+             document.body.style.backgroundColor = 'black'
             Setstyle({
                 color: 'white',
                 backgroundColor: 'black',
-                // document.body.style.backgroundColor : 'black'
             })
             setText('Light mode')
         }
